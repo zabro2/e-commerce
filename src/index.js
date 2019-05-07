@@ -11,7 +11,7 @@ fetch('https://my-json-server.typicode.com/tdmichaelis/json-api/products')
 .then(items => {
 
     ReactDOM.render(
-        <Provider store={createStore(reducers, {ItemList: items, ItemListShow: items, CartList: []})}>
+        <Provider store={createStore(reducers, {ItemList: items, ItemListShow: items, CartList:[]})}>
             <App />
         </Provider>
         ,

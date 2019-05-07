@@ -7,9 +7,10 @@ const reducer = (state, action) => {
             }
         case 'DELETE_CART':
             let id = action.payload
-            let newState = state.CartList.filter(item => item.id !== id)
+            console.log('reducing delete cart')
             return {
-
+                ...state,
+                CartList: state.CartList.filter(item => item.id !== id)
             }
         case 'SEARCH_ITEMS':
             return {}

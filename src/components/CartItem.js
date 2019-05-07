@@ -6,8 +6,7 @@ import { DeleteFromCart } from '../redux/Actions'
 const CartItem = (props) => {
 
     const handleClick = () => {
-        let id = props.id
-        props.DeleteFromCart(id)
+        props.DeleteFromCart(props.id)
     }
     return (
         <div className='item'>
