@@ -21,7 +21,7 @@ const reducer = (state, action) => {
             } else {
                 return {
                     ...state,
-                    ItemListShow: state.ItemListShow.filter(item => item.title.includes(term) || item.category.includes(term))
+                    ItemListShow: state.ItemListShow.filter(item => item.title.toLowerCase().includes(term) || item.category.toLowerCase().includes(term))
                 }
             }
         default: return state

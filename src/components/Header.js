@@ -35,6 +35,7 @@ class Header extends React.Component {
                         <input value={this.state.value} placeholder='Search for a product...' onChange={this.onHandleChange} />
                     </div>
                 </form>
+                <div className='right item'>e-commerce</div>
             </div>
         )
     }
