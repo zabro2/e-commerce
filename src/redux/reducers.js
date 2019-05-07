@@ -3,17 +3,27 @@ const reducer = (state, action) => {
         case 'ADD_CART':
             return {
                 ...state,
-                CartList: [...state.CartList, (state.ItemList.find(obj =>  obj.id === action.payload))]
+                CartList: [...state.CartList, (state.ItemList.find(obj => obj.id === action.payload))]
             }
         case 'DELETE_CART':
             let id = action.payload
-            console.log('reducing delete cart')
             return {
                 ...state,
                 CartList: state.CartList.filter(item => item.id !== id)
             }
-        case 'SEARCH_ITEMS':
-            return {}
+        case 'SEARCH_LIST':
+            let term = action.payload
+            if (term.length <= 1) {
+                return {
+                    ...state,
+                    ItemListShow: state.ItemList
+                }
+            } else {
+                return {
+                    ...state,
+                    ItemListShow: state.ItemListShow.filter(item => item.title.includes(term) || item.category.includes(term))
+                }
+            }
         default: return state
     }
 }

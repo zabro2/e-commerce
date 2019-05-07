@@ -1,6 +1,7 @@
 .image {
     max-height: 125px;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .imageItem {
@@ -14,4 +15,26 @@
 
 .cards {
     width: 100%
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.priceHolder {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 10px
+}
+
+.buttonHolder {
+    display: flex;
 }

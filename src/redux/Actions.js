@@ -13,3 +13,11 @@ export const DeleteFromCart = (id) => {
         payload: id
     }
 }
+
+export const SearchFromList = (term) => {
+    console.log(`searching ${term} in list`)
+    return {
+        type: 'SEARCH_LIST',
+        payload: term
+    }
+}

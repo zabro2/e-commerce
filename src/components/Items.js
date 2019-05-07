@@ -15,13 +15,17 @@ const Items = (props) => {
         <div className='card'>
             <div className='content'>
                 <img className='ui centered image' src={props.img} alt={props.alt} />
-                <div>{props.price}</div>
-                <div>{props.title}</div>
+                <div className='title header'>{props.title}</div>
             </div>
-            <Link className='ui basic blue button' to={`/Items/${props.id}`}>
-                <div id={props.id}>Details</div>
-            </Link>
-            <div id={props.id} className='ui basic green button' onClick={handleClick}>Add to Cart</div>
+            <div className='priceHolder'>
+                <div>${props.price}</div>
+            </div>
+            <div className='buttonHolder'>
+                <Link className='ui blue button left attached fluid' to={`/Items/${props.id}`}>
+                    <div id={props.id}>Details</div>
+                </Link>
+                <div id={props.id} className='ui green button right attached fluid' onClick={handleClick}>Add to Cart</div>
+            </div>
         </div>
     )
 }

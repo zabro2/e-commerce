@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux';
 
+import { SearchFromList } from '../redux/Actions'
+
 class Header extends React.Component {
     state = {
         value: ''
@@ -10,11 +12,13 @@ class Header extends React.Component {
     onHandleChange = (evt) => {
         this.setState({
             value: evt.target.value
-        })
+        }, () => this.onSearch())
+        
     }
 
-    onSearchClick = (evt) => {
-        evt.preventDefault()
+    onSearch = () => {
+        let term = this.state.value
+        this.props.SearchFromList(term)
     }
 
     render() {
@@ -30,7 +34,6 @@ class Header extends React.Component {
                     <div className='ui input' >
                         <input value={this.state.value} placeholder='Search for a product...' onChange={this.onHandleChange} />
                     </div>
-                    <button className='searchButton ui button' onClick={this.onSearchClick}>Search</button>
                 </form>
             </div>
         )
@@ -42,4 +45,4 @@ const mapStateToProps = state => {
 
 }
 
-export default connect(mapStateToProps)(Header)
+export default connect(mapStateToProps, { SearchFromList })(Header)
