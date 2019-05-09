@@ -32,8 +32,9 @@ class Header extends React.Component {
                     <div>{this.props.CartList.length}</div>
                 </Link>
                 <form className='search item'>
-                    <div className='ui input' >
-                        <input value={this.state.value} placeholder='Search for a product...' onChange={this.onHandleChange} />
+                    <div className='ui input icon inputHeader' >
+                        <input value={this.state.value} placeholder='Search for a product or catagory...' onChange={this.onHandleChange} />
+                        <i className='search icon'></i>
                     </div>
                 </form>
                 <div className='right item'>{this.props.userName}</div>

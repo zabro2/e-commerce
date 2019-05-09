@@ -7,6 +7,7 @@ import Header from './Header'
 import Details from './Details'
 import Cart from './Cart'
 import SignIn from './SignIn'
+import Footer from './Footer'
 
 class App extends React.Component {
 

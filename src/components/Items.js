@@ -22,9 +22,9 @@ const Items = (props) => {
             </div>
             <div className='buttonHolder'>
                 <Link className='ui blue button left attached fluid' to={`/Items/${props.id}`}>
-                    <div id={props.id}>Details</div>
+                    <div className='btnDescription' id={props.id}>Details</div>
                 </Link>
-                <div id={props.id} className='ui green button right attached fluid' onClick={handleClick}>Add to Cart</div>
+                <div id={props.id} className='ui green button right attached fluid' onClick={handleClick}><div className='btnDescription'>Add to Cart</div></div>
             </div>
         </div>
     )

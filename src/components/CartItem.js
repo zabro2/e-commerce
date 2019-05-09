@@ -19,9 +19,11 @@ const CartItem = (props) => {
                 <div className='detailsPrice'>${props.price}</div>
                 <div className='meta'>Description</div>
                 <div className='description'>{props.description}</div>
-                <div id={props.id} className='ui red button detailsBtn' onClick={handleClick}>Remove</div>
+                <div className='detailsBtnHolder'>
+                    <div id={props.id} className='ui red button detailsBtn' onClick={handleClick}>Remove</div>
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 

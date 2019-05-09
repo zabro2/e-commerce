@@ -24,7 +24,7 @@ const Details = (props) => {
                     <div className='detailsPrice' >${item.price}</div>
                     <div className='meta'>Description</div>
                     <div className='description' >{item.description}</div>
-                    <div id={props.id} className='ui green button detailsBtn' onClick={handleClick}>Add to Cart</div>
+                        <div id={props.id} className='ui green button detailsBtn' onClick={handleClick}>Add to Cart</div>
                 </div>
             </div>
         </div>

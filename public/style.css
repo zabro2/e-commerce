@@ -30,6 +30,10 @@
     margin: 40px 0 40px 0;
 }
 
+.inputHeader {
+    min-width: 300px
+}
+
 .box {
     display: flex;
     height: 150px;
@@ -73,6 +77,10 @@
     margin-left: 80px;
 }
 
+.btnDescription {
+    text-align: center;
+}
+
 .detailsSpot {
     position: relative;
     top: 80px;
@@ -80,10 +88,6 @@
 
 .detailsContent {
     display: flex;
-}
-
-.detailsBtn {
-    width: 120px;
 }
 
 .detailsRating {
@@ -103,6 +107,15 @@
     margin-bottom: 10px;
 }
 
+.detailsBtnHolder {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.detailsBtn {
+    width: 120px;
+}
+
 .title {
     text-align: center;
     margin-top: 10px;
@@ -116,6 +129,9 @@
 }
 
 .cartList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     top: 80px;
     margin-bottom: 100px;
@@ -123,4 +139,20 @@
 
 .buttonHolder {
     display: flex;
+}
+
+.bottomCart {
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.totalPriceHolder {
+    font-size: 1.5em;
+}
+
+.footer{
+    position: absolute;
+    bottom: -60px;
 }
