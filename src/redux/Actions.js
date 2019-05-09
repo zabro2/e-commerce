@@ -21,3 +21,11 @@ export const SearchFromList = (term) => {
         payload: term.toLowerCase()
     }
 }
+
+export const SignInUser = (user) => {
+    console.log(`${user} is signed in`)
+    return {
+        type: 'SIGN_IN_USER',
+        payload: user
+    }
+}

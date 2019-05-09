@@ -9,15 +9,17 @@ const CartItem = (props) => {
         props.DeleteFromCart(props.id)
     }
     return (
-        <div className='item'>
-            <img className='ui image imageItem' alt={props.title} src={props.img}/>
+        <div className='ui segment detailsContent'>
+            <div className='imageHolder'>
+                <img className='ui image imageItem' alt={props.title} src={props.img} />
+            </div>
             <div className='content'>
-                <div className='header'>{props.title}</div>
-                <div className=''>Rating: {props.rating}/5</div>
-                <div className=''>{props.price}</div>
+                <div className='ui huge header'>{props.title}</div>
+                <div className='detailsRating'>Rating: {props.rating}/5</div>
+                <div className='detailsPrice'>${props.price}</div>
                 <div className='meta'>Description</div>
                 <div className='description'>{props.description}</div>
-                <div id={props.id} className='ui basic red button' onClick={handleClick}>Remove</div>
+                <div id={props.id} className='ui red button detailsBtn' onClick={handleClick}>Remove</div>
             </div>
         </div>
     )

@@ -12,7 +12,7 @@ const Items = (props) => {
     }
 
     return (
-        <div className='card'>
+        <div className='ui centered raised card'>
             <div className='content'>
                 <img className='ui centered image' src={props.img} alt={props.alt} />
                 <div className='title header'>{props.title}</div>

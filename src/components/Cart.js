@@ -5,7 +5,7 @@ import CartItem from './CartItem'
 
 class Cart extends React.Component {
     state = {
-        price: 0
+        price: null
     }
 
     handleOnClick = () => {
@@ -20,18 +20,16 @@ class Cart extends React.Component {
     }
 
     render() {
-        console.log(this.props.CartList)
-
         return (
             <div>
-                <div className='ui items'>
+                <div className='cartList'>
                     {this.props.CartList.map((item, idx) => (
                         <CartItem key={idx} img={item.img} price={item.price} title={item.title} description={item.description} rating={item.rating} alt={item.title} id={item.id} uuid={idx} />
                     ))}
-                </div>
-                <div className='bottomCart'>
-                    <div className='ui primary button' onClick={this.handleOnClick}>Comfirm</div>
-                    <div className='totalPriceHolder'>{this.state.price}</div>
+                    <div className='bottomCart'>
+                        <div className='ui primary button' onClick={this.handleOnClick}>Comfirm</div>
+                        <div className='totalPriceHolder'>{this.state.price}</div>
+                    </div>
                 </div>
             </div>
         )

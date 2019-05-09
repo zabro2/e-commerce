@@ -7,9 +7,13 @@ const reducer = (state, action) => {
             }
         case 'DELETE_CART':
             let id = action.payload
+            let idx = state.CartList.findIndex(item => item.id === id)
             return {
                 ...state,
-                CartList: state.CartList.filter(item => item.id !== id)
+                CartList: [
+                    ...state.CartList.slice(0, idx),
+                    ...state.CartList.slice(idx +1)
+                ]
             }
         case 'SEARCH_LIST':
             let term = action.payload
@@ -24,6 +28,11 @@ const reducer = (state, action) => {
                     ItemListShow: state.ItemListShow.filter(item => item.title.toLowerCase().includes(term) || item.category.toLowerCase().includes(term))
                 }
             }
+        case 'SIGN_IN_USER':
+        return {
+           ...state,
+           userName: action.payload
+        }
         default: return state
     }
 }
