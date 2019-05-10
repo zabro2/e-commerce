@@ -34,6 +34,10 @@
     min-width: 300px
 }
 
+.fa-sign-out-alt {
+    color: black;
+}
+
 .box {
     display: flex;
     height: 150px;
@@ -51,7 +55,7 @@
     align-items: center;
     justify-content: center;
     margin-left: 80px;
-    min-width: 380px;
+    min-width: 390px;
 }
 
 .image {
@@ -87,6 +91,7 @@
 }
 
 .detailsContent {
+    min-width: 1450px;
     display: flex;
 }
 
@@ -104,10 +109,12 @@
 }
 
 .description {
+    max-width: 500px;
     margin-bottom: 10px;
 }
 
 .detailsBtnHolder {
+    width: 500px;
     display: flex;
     justify-content: flex-end;
 }
@@ -137,6 +144,11 @@
     margin-bottom: 100px;
 }
 
+.ternaryText {
+    position: relative;
+    top: 150px;
+}
+
 .buttonHolder {
     display: flex;
 }
@@ -153,6 +165,11 @@
 }
 
 .footer{
+    position: absolute;
+    bottom: 0;
+}
+
+.listFooter {
     position: absolute;
     bottom: -60px;
 }

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import { SignInUser } from '../redux/Actions'
+import Footer from './Footer'
 
 class SignIn extends React.Component {
     state = {
@@ -41,7 +42,7 @@ class SignIn extends React.Component {
     render() {
         return (
             <div className='SignIn'>
-                <div className='ui card cardSignIn'>
+                <div className='ui raised card cardSignIn'>
                     <div className='headerHolder'>
                         <div className='ui huge header'>e-commerce</div>
                     </div>
@@ -53,10 +54,11 @@ class SignIn extends React.Component {
                             <input value={this.state.valuePass} onChange={this.handleChange2} type='password' placeholder='PassWord here...' />
                         </div>
                         <Link onClick={this.handleClick} to='/home'>
-                            <div className='ui green button huge'>Sign In</div>
+                            <div className='ui green button large'>Sign In</div>
                         </Link>
                     </div>
                 </div>
+                <Footer className='footer ui menu fluid'/>
             </div>
         )
     }

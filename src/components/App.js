@@ -3,11 +3,9 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import ItemList from './ItemList'
-import Header from './Header'
 import Details from './Details'
 import Cart from './Cart'
 import SignIn from './SignIn'
-import Footer from './Footer'
 
 class App extends React.Component {
 
@@ -16,7 +14,7 @@ class App extends React.Component {
             <div className='mainContainer'>
                 <BrowserRouter>
                     <div className='centerContainer'>
-                        <Header />
+                        {/* <Header /> */}
                         <Route path='/' exact component={SignIn} />
                         <Route path='/home' exact component={ItemList} />
                         <Route path="/Items/:ItemId" component={Details} />
