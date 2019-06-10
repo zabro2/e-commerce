@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route } from 'react-router-dom'
+import { HashRouter, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
 import ItemList from './ItemList'
@@ -12,7 +12,7 @@ class App extends React.Component {
     render() {
         return (
             <div className='mainContainer'>
-                <BrowserRouter>
+                <HashRouter>
                     <div className='centerContainer'>
                         {/* <Header /> */}
                         <Route path='/' exact component={SignIn} />
@@ -20,7 +20,7 @@ class App extends React.Component {
                         <Route path="/Items/:ItemId" component={Details} />
                         <Route path='/Cart' component={Cart} />
                     </div>
-                </BrowserRouter>
+                </HashRouter>
             </div>
         )
     }
